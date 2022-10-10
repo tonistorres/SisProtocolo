@@ -18,8 +18,6 @@ import br.com.subgerentepro.jbdc.ConexaoUtil;
 import static br.com.subgerentepro.telas.TelaPrincipal.DeskTop;
 import static br.com.subgerentepro.telas.TelaPrincipal.lblNomeCompletoUsuario;
 import static br.com.subgerentepro.telas.TelaPrincipal.lblPerfil;
-import static br.com.subgerentepro.telas.TelaPrincipal.lblRepositorioCPU;
-import static br.com.subgerentepro.telas.TelaPrincipal.lblRepositorioHD;
 import static br.com.subgerentepro.telas.TelaPrincipal.lblUsuarioLogado;
 import java.awt.Color;
 import java.awt.Font;
@@ -179,12 +177,10 @@ public class TelaProtocDocsTFD extends javax.swing.JInternalFrame {
         lblRepoCPU.setFont(f);
         lblRepoCPU.setForeground(Color.WHITE);
         lblRepoCPU.setText("");
-        lblRepoCPU.setText(lblRepositorioCPU.getText());
 
         lblRepoHD.setFont(f);
         lblRepoHD.setForeground(Color.WHITE);
         lblRepoHD.setText("");
-        lblRepoHD.setText(lblRepositorioHD.getText());
 
         lblRepoLogin.setFont(f);
         lblRepoLogin.setForeground(Color.WHITE);

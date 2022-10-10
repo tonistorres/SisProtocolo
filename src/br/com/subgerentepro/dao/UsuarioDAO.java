@@ -566,7 +566,7 @@ public class UsuarioDAO implements GenericDAO<UsuarioDTO> {
                 userDTO.setSenhaDto(resultSet.getString("senha"));
                 userDTO.setPerfilDto(resultSet.getString("perfil"));
                 userDTO.setUsuarioDto(resultSet.getString("usuario"));
-                userDTO.setSexoDto(resultSet.getString("sexo"));
+//                userDTO.setSexoDto(resultSet.getString("sexo"));
 
                 return userDTO;
 

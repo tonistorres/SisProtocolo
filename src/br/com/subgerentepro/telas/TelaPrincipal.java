@@ -229,12 +229,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lblImagemData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/subgerentepro/imagens/Date.png")));
         progressBarraPesquisa.setIndeterminate(true);
 
-        //personalizando informações de Maquina 
-        lblRepositorioCPU.setForeground(Color.WHITE);
-        lblRepositorioHD.setForeground(Color.WHITE);
-        lblCPU.setForeground(Color.WHITE);
-        lblHD.setForeground(Color.WHITE);
-        painelMiniMaquia.setBackground(new Color(9, 81, 107));
     }
 
     private void botoesBarraFerramenta() {
@@ -306,11 +300,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnExit = new javax.swing.JButton();
         jSeparator15 = new javax.swing.JToolBar.Separator();
         progressBarraPesquisa = new javax.swing.JProgressBar();
-        painelMiniMaquia = new javax.swing.JPanel();
-        lblCPU = new javax.swing.JLabel();
-        lblRepositorioCPU = new javax.swing.JLabel();
-        lblHD = new javax.swing.JLabel();
-        lblRepositorioHD = new javax.swing.JLabel();
         PainelPrincipal = new javax.swing.JPanel();
         carregador1 = new br.com.subgerentepro.telas.Carregador();
         painelInferior = new javax.swing.JPanel();
@@ -536,61 +525,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         progressBarraPesquisa.setPreferredSize(new java.awt.Dimension(25, 14));
         BarraFerramentas.add(progressBarraPesquisa);
 
-        lblCPU.setText("CPU:");
-
-        lblRepositorioCPU.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
-        lblRepositorioCPU.setText("_____________");
-
-        lblHD.setText("HD:");
-
-        lblRepositorioHD.setFont(new java.awt.Font("Tahoma", 1, 8)); // NOI18N
-        lblRepositorioHD.setText("____________");
-
-        javax.swing.GroupLayout painelMiniMaquiaLayout = new javax.swing.GroupLayout(painelMiniMaquia);
-        painelMiniMaquia.setLayout(painelMiniMaquiaLayout);
-        painelMiniMaquiaLayout.setHorizontalGroup(
-            painelMiniMaquiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelMiniMaquiaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblCPU)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblRepositorioCPU)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblHD)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblRepositorioHD)
-                .addContainerGap(121, Short.MAX_VALUE))
-        );
-        painelMiniMaquiaLayout.setVerticalGroup(
-            painelMiniMaquiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelMiniMaquiaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(painelMiniMaquiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCPU)
-                    .addComponent(lblRepositorioCPU)
-                    .addComponent(lblHD)
-                    .addComponent(lblRepositorioHD))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout painelBarraFerramentaLayout = new javax.swing.GroupLayout(painelBarraFerramenta);
         painelBarraFerramenta.setLayout(painelBarraFerramentaLayout);
         painelBarraFerramentaLayout.setHorizontalGroup(
             painelBarraFerramentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBarraFerramentaLayout.createSequentialGroup()
                 .addComponent(BarraFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, 761, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(painelMiniMaquia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(323, Short.MAX_VALUE))
         );
         painelBarraFerramentaLayout.setVerticalGroup(
             painelBarraFerramentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBarraFerramentaLayout.createSequentialGroup()
-                .addGroup(painelBarraFerramentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(painelMiniMaquia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelBarraFerramentaLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(BarraFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
+                .addComponent(BarraFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -707,7 +654,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addComponent(lblMaxServidor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblMaxUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(rtlUsuarioMaximoConexao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(rtlNumeroConexoesAtivas, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
+                        .addComponent(rtlNumeroConexoesAtivas, javax.swing.GroupLayout.PREFERRED_SIZE, 175, Short.MAX_VALUE))
                     .addComponent(lblConexoesAtivas, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painelCronometro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -833,6 +780,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addComponent(carregador1, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
         );
 
+        DeskTop.setLayer(painelBarraFerramenta, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        DeskTop.setLayer(PainelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout DeskTopLayout = new javax.swing.GroupLayout(DeskTop);
         DeskTop.setLayout(DeskTopLayout);
         DeskTopLayout.setHorizontalGroup(
@@ -850,8 +800,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(PainelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        DeskTop.setLayer(painelBarraFerramenta, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        DeskTop.setLayer(PainelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         mnCadastros.setText("Cadastros");
         mnCadastros.addActionListener(new java.awt.event.ActionListener() {
@@ -2009,13 +1957,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public static javax.swing.JToolBar.Separator jSeparator8;
     public static javax.swing.JToolBar.Separator jSeparator9;
     public static javax.swing.JLabel lblAlertaCritical;
-    public static javax.swing.JLabel lblCPU;
     public static javax.swing.JLabel lblConexoesAtivas;
     public static javax.swing.JLabel lblDataSistema;
     public static javax.swing.JLabel lblEspaco1;
     public static javax.swing.JLabel lblEspaco2;
     public static javax.swing.JLabel lblEspaco3;
-    public static javax.swing.JLabel lblHD;
     public static javax.swing.JLabel lblHora;
     public static javax.swing.JLabel lblImagemData;
     public static javax.swing.JLabel lblImagemData1;
@@ -2027,8 +1973,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public static javax.swing.JLabel lblMinuto;
     public static javax.swing.JLabel lblNomeCompletoUsuario;
     public static javax.swing.JLabel lblPerfil;
-    public static javax.swing.JLabel lblRepositorioCPU;
-    public static javax.swing.JLabel lblRepositorioHD;
     public static javax.swing.JLabel lblSaindoSistemaPorFaltaConexao;
     public static javax.swing.JLabel lblSegundos;
     public static javax.swing.JLabel lblStatusData;
@@ -2053,7 +1997,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public static javax.swing.JPanel painelCronometro;
     public static javax.swing.JPanel painelInferior;
     public static javax.swing.JPanel painelInfoComunic;
-    public static javax.swing.JPanel painelMiniMaquia;
     public static javax.swing.JProgressBar progressBarraPesquisa;
     public static javax.swing.JLabel rtlMaximoConexaoServidor;
     public static javax.swing.JLabel rtlNumeroConexoesAtivas;
