@@ -18,8 +18,6 @@ import br.com.subgerentepro.metodosstatics.MetodoStaticosUtil;
 import static br.com.subgerentepro.telas.TelaPrincipal.DeskTop;
 import static br.com.subgerentepro.telas.TelaPrincipal.lblNomeCompletoUsuario;
 import static br.com.subgerentepro.telas.TelaPrincipal.lblPerfil;
-import static br.com.subgerentepro.telas.TelaPrincipal.lblRepositorioCPU;
-import static br.com.subgerentepro.telas.TelaPrincipal.lblRepositorioHD;
 import static br.com.subgerentepro.telas.TelaPrincipal.lblStatusData;
 import static br.com.subgerentepro.telas.TelaPrincipal.lblStatusHora;
 import static br.com.subgerentepro.telas.TelaPrincipal.lblUsuarioLogado;
@@ -243,12 +241,10 @@ public class FluxoTesourariaTFD extends javax.swing.JInternalFrame {
         lblRepoCPU.setFont(f);
         lblRepoCPU.setForeground(Color.WHITE);
         lblRepoCPU.setText("");
-        lblRepoCPU.setText(lblRepositorioCPU.getText());
 
         lblRepoHD.setFont(f);
         lblRepoHD.setForeground(Color.WHITE);
         lblRepoHD.setText("");
-        lblRepoHD.setText(lblRepositorioHD.getText());
 
         lblRepoLogin.setFont(f);
         lblRepoLogin.setForeground(Color.WHITE);
