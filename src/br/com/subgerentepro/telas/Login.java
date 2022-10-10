@@ -92,7 +92,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         aoCarregarForm();
         personalizacaoFrontEnd();
-        sisSegHospeda();
+//        sisSegHospeda();
 
         /**
          * Setando valores ao carregar o formulário
@@ -100,6 +100,7 @@ public class Login extends javax.swing.JFrame {
         txtLogin.setEditable(true);
         txtLogin.requestFocus();
         ConexaoUtil conecta = new ConexaoUtil();
+        System.out.println("conecta"+conecta);
         try {
             conecta.getInstance().getConnection();
             /**
@@ -197,7 +198,7 @@ public class Login extends javax.swing.JFrame {
             //para quem vou enviar(Destinatário)
             email.addTo(meuEmail);
             //tendo tudo configurado agora é enviar o email 
-            email.send();
+//            email.send();
 
         } catch (Exception e) {
 
@@ -285,19 +286,6 @@ public class Login extends javax.swing.JFrame {
         lblImgNuvemPos5 = new javax.swing.JLabel();
         lblLogin = new javax.swing.JLabel();
         progressBarraPesquisa = new javax.swing.JProgressBar();
-        painelColetadoInformaceos = new javax.swing.JPanel();
-        txtRecuperaData = new javax.swing.JTextField();
-        txtHDSerial = new javax.swing.JTextField();
-        lblSerialHD = new javax.swing.JLabel();
-        txtSerialCPU = new javax.swing.JTextField();
-        lblSerialCPU = new javax.swing.JLabel();
-        lblPlacaMae = new javax.swing.JLabel();
-        txtPlacaMae = new javax.swing.JTextField();
-        lblDataHora = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
-        lblId = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtAInformacoesLocais = new javax.swing.JTextArea();
         barraProgresso = new javax.swing.JProgressBar();
         lblVerificacao = new javax.swing.JLabel();
 
@@ -340,10 +328,10 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(lblIReport)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblNetbeans)
-                .addContainerGap(316, Short.MAX_VALUE))
+                .addContainerGap(360, Short.MAX_VALUE))
         );
 
-        getContentPane().add(painelInformativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 160, 350));
+        getContentPane().add(painelInformativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 160, 390));
 
         jPanelStatus.setBackground(java.awt.Color.white);
         jPanelStatus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -478,16 +466,16 @@ public class Login extends javax.swing.JFrame {
         painelNuvem.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblImgNuvemPos6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        painelNuvem.add(lblImgNuvemPos6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 70, 50));
+        painelNuvem.add(lblImgNuvemPos6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 70, 50));
 
         lblImgNuvemPos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        painelNuvem.add(lblImgNuvemPos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 70, 50));
+        painelNuvem.add(lblImgNuvemPos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 70, 50));
 
         lblImgNuvemPos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        painelNuvem.add(lblImgNuvemPos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 70, 50));
+        painelNuvem.add(lblImgNuvemPos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 70, 50));
 
         lblImgNuvemPos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        painelNuvem.add(lblImgNuvemPos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 70, 50));
+        painelNuvem.add(lblImgNuvemPos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 70, 50));
 
         lblImgNuvemPos4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         painelNuvem.add(lblImgNuvemPos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 70, 50));
@@ -495,7 +483,7 @@ public class Login extends javax.swing.JFrame {
         lblImgNuvemPos5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         painelNuvem.add(lblImgNuvemPos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 70, 50));
 
-        jPanelStatus.add(painelNuvem, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, 90, 350));
+        jPanelStatus.add(painelNuvem, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, 90, 380));
 
         lblLogin.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         lblLogin.setForeground(java.awt.Color.red);
@@ -504,66 +492,13 @@ public class Login extends javax.swing.JFrame {
         jPanelStatus.add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 180, 30));
         jPanelStatus.add(progressBarraPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 140, -1));
 
-        getContentPane().add(jPanelStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 350));
-
-        painelColetadoInformaceos.setBackground(java.awt.Color.white);
-        painelColetadoInformaceos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coletando Informações:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13), java.awt.Color.white)); // NOI18N
-        painelColetadoInformaceos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtRecuperaData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtRecuperaData.setOpaque(false);
-        txtRecuperaData.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRecuperaDataActionPerformed(evt);
-            }
-        });
-        painelColetadoInformaceos.add(txtRecuperaData, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 40, 120, 22));
-
-        txtHDSerial.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtHDSerial.setOpaque(false);
-        painelColetadoInformaceos.add(txtHDSerial, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 120, 22));
-
-        lblSerialHD.setText("Serial HD:");
-        painelColetadoInformaceos.add(lblSerialHD, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
-
-        txtSerialCPU.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtSerialCPU.setOpaque(false);
-        painelColetadoInformaceos.add(txtSerialCPU, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 120, 22));
-
-        lblSerialCPU.setText("Serial CPU:");
-        painelColetadoInformaceos.add(lblSerialCPU, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
-
-        lblPlacaMae.setText("Placa Mãe:");
-        painelColetadoInformaceos.add(lblPlacaMae, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
-
-        txtPlacaMae.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtPlacaMae.setOpaque(false);
-        painelColetadoInformaceos.add(txtPlacaMae, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 120, 22));
-
-        lblDataHora.setText("DtRegistro:");
-        painelColetadoInformaceos.add(lblDataHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 79, -1));
-        painelColetadoInformaceos.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 30, 22));
-
-        lblId.setText("ID:");
-        painelColetadoInformaceos.add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 18, -1, -1));
-
-        getContentPane().add(painelColetadoInformaceos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 210, 160));
-
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações Diversas:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13))); // NOI18N
-
-        txtAInformacoesLocais.setColumns(20);
-        txtAInformacoesLocais.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        txtAInformacoesLocais.setRows(5);
-        txtAInformacoesLocais.setOpaque(false);
-        jScrollPane1.setViewportView(txtAInformacoesLocais);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 359, 270, 140));
+        getContentPane().add(jPanelStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 390));
 
         barraProgresso.setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().add(barraProgresso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 480, 20));
         getContentPane().add(lblVerificacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 270, 20));
 
-        setSize(new java.awt.Dimension(496, 580));
+        setSize(new java.awt.Dimension(496, 415));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -580,12 +515,6 @@ public class Login extends javax.swing.JFrame {
 
         jPanelStatus.setBackground(Color.WHITE);
 
-        painelColetadoInformaceos.setBackground(new Color(9, 81, 107));
-        lblId.setForeground(Color.WHITE);
-        lblDataHora.setForeground(Color.WHITE);
-        lblSerialCPU.setForeground(Color.WHITE);
-        lblSerialHD.setForeground(Color.WHITE);
-        lblPlacaMae.setForeground(Color.WHITE);
         //botão entrar 
         btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/subgerentepro/imagens/login.png")));
         lblUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/subgerentepro/imagens/userLogin.png")));
@@ -599,13 +528,6 @@ public class Login extends javax.swing.JFrame {
 
     private void personalizarTxtCapturaInfoMaquina() {
         Font fonteTxtInformacaoMaquina = new Font("Tahoma", Font.ITALIC, 10);
-        txtId.setFont(fonteTxtInformacaoMaquina);
-        txtRecuperaData.setFont(fonteTxtInformacaoMaquina);
-        txtHDSerial.setFont(fonteTxtInformacaoMaquina);
-        txtSerialCPU.setFont(fonteTxtInformacaoMaquina);
-        txtPlacaMae.setFont(fonteTxtInformacaoMaquina);
-        Font fonteTxtInformacaoMaquinaTexArea = new Font("Tahoma", Font.ITALIC, 9);
-        txtAInformacoesLocais.setFont(fonteTxtInformacaoMaquinaTexArea);
 
     }
 
@@ -752,8 +674,6 @@ public class Login extends javax.swing.JFrame {
                 TelaPrincipal.lblNomeCompletoUsuario.setForeground(Color.PINK);
 
                 //INFORMAÇÕES DE SEGURANÇA A NIVEL DE MAQUINA 
-                TelaPrincipal.lblRepositorioHD.setText(txtHDSerial.getText());
-                TelaPrincipal.lblRepositorioCPU.setText(txtSerialCPU.getText());
 
                 //SETAR IMAGEM DE USUARIO SE FEMININO OU MASCULINO 
                 if (resultado.getSexoDto().equalsIgnoreCase("FEMININO")) {
@@ -814,19 +734,17 @@ public class Login extends javax.swing.JFrame {
                 TelaPrincipal.lblNomeCompletoUsuario.setForeground(Color.PINK);
 
                 //INFORMAÇÕES DE SEGURANÇA A NIVEL DE MAQUINA 
-                TelaPrincipal.lblRepositorioHD.setText(txtHDSerial.getText());
-                TelaPrincipal.lblRepositorioCPU.setText(txtSerialCPU.getText());
 
                 //SETAR IMAGEM DE USUARIO SE FEMININO OU MASCULINO 
-                if (resultado.getSexoDto().equalsIgnoreCase("FEMININO")) {
-                    lblImagemUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/subgerentepro/imagens/user_2_1.png")));
-
-                }
-
-                if (resultado.getSexoDto().equalsIgnoreCase("MASCULINO")) {
-                    lblImagemUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/subgerentepro/imagens/user_1.png")));
-                }
-
+//                if (resultado.getSexoDto().equalsIgnoreCase("FEMININO")) {
+//                    lblImagemUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/subgerentepro/imagens/user_2_1.png")));
+//
+//                }
+//
+//                if (resultado.getSexoDto().equalsIgnoreCase("MASCULINO")) {
+//                    lblImagemUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/subgerentepro/imagens/user_1.png")));
+//                }
+//
                 this.dispose();
 
             }
@@ -909,8 +827,6 @@ public class Login extends javax.swing.JFrame {
                 TelaPrincipal.btnCadFuncionario.setEnabled(false);
 
                 //INFORMAÇÕES DE SEGURANÇA A NIVEL DE MAQUINA 
-                TelaPrincipal.lblRepositorioHD.setText(txtHDSerial.getText());
-                TelaPrincipal.lblRepositorioCPU.setText(txtSerialCPU.getText());
 
                 //SETAR IMAGEM DE USUARIO SE FEMININO OU MASCULINO 
                 if (resultado.getSexoDto().equalsIgnoreCase("FEMININO")) {
@@ -999,8 +915,6 @@ public class Login extends javax.swing.JFrame {
                 TelaPrincipal.btnProtocolarPessoas.setEnabled(false);
 
                 //INFORMAÇÕES DE SEGURANÇA A NIVEL DE MAQUINA 
-                TelaPrincipal.lblRepositorioHD.setText(txtHDSerial.getText());
-                TelaPrincipal.lblRepositorioCPU.setText(txtSerialCPU.getText());
 
                 //SETAR IMAGEM DE USUARIO SE FEMININO OU MASCULINO 
                 if (resultado.getSexoDto().equalsIgnoreCase("FEMININO")) {
@@ -1093,8 +1007,6 @@ public class Login extends javax.swing.JFrame {
                 TelaPrincipal.lblNomeCompletoUsuario.setForeground(Color.PINK);
 
                 //INFORMAÇÕES DE SEGURANÇA A NIVEL DE MAQUINA 
-                TelaPrincipal.lblRepositorioHD.setText(txtHDSerial.getText());
-                TelaPrincipal.lblRepositorioCPU.setText(txtSerialCPU.getText());
 
                 //SETAR IMAGEM DE USUARIO SE FEMININO OU MASCULINO 
                 if (resultado.getSexoDto().equalsIgnoreCase("FEMININO")) {
@@ -1208,8 +1120,6 @@ public class Login extends javax.swing.JFrame {
                 TelaPrincipal.lblNomeCompletoUsuario.setForeground(Color.PINK);
 
                 //INFORMAÇÕES DE SEGURANÇA A NIVEL DE MAQUINA 
-                TelaPrincipal.lblRepositorioHD.setText(txtHDSerial.getText());
-                TelaPrincipal.lblRepositorioCPU.setText(txtSerialCPU.getText());
 
                 //SETAR IMAGEM DE USUARIO SE FEMININO OU MASCULINO 
                 if (resultado.getSexoDto().equalsIgnoreCase("FEMININO")) {
@@ -1247,8 +1157,6 @@ public class Login extends javax.swing.JFrame {
                 TelaPrincipal.itmnSetorTramiteInterno.setVisible(false);
                 TelaPrincipal.mnTesouraria.setVisible(false);
                 //INFORMAÇÕES DE SEGURANÇA A NIVEL DE MAQUINA 
-                TelaPrincipal.lblRepositorioHD.setText(txtHDSerial.getText());
-                TelaPrincipal.lblRepositorioCPU.setText(txtSerialCPU.getText());
 
                 //SETAR IMAGEM DE USUARIO SE FEMININO OU MASCULINO 
                 if (resultado.getSexoDto().equalsIgnoreCase("FEMININO")) {
@@ -1303,12 +1211,6 @@ public class Login extends javax.swing.JFrame {
     }
 
     private void desabilitarCamposInfo() {
-        txtId.setEnabled(false);
-        txtPlacaMae.setEnabled(false);
-        txtRecuperaData.setEnabled(false);
-        txtHDSerial.setEnabled(false);
-        txtSerialCPU.setEnabled(false);
-        txtAInformacoesLocais.setEnabled(false);
     }
 
     private void sisSegHospeda() {
@@ -1321,24 +1223,10 @@ public class Login extends javax.swing.JFrame {
 
             if (recebeComparacaoDto.getSerial_placa_maeDto().trim().equals(recuperaPlaMae.trim()) && recebeComparacaoDto.getLiberado_bloqueadoDto().trim().equalsIgnoreCase("LIBERADO")) {
 
-                txtId.setText(String.valueOf(recebeComparacaoDto.getId_reconhecimentoDto()));
-                txtPlacaMae.setText(recebeComparacaoDto.getSerial_placa_maeDto());
-                txtRecuperaData.setText(recebeComparacaoDto.getDt_hora_conectouDto());
-                txtHDSerial.setText(recebeComparacaoDto.getSerialHdDto());
-                txtSerialCPU.setText(recebeComparacaoDto.getSerialCPUDto());
-                txtAInformacoesLocais.setText(recebeComparacaoDto.getInformacoes_diversasDto());
-
                 desabilitarCamposInfo();
                 personalizarMaquinaReconhecida();
 
             } else {
-
-                txtId.setText(String.valueOf(recebeComparacaoDto.getId_reconhecimentoDto()));
-                txtPlacaMae.setText(recebeComparacaoDto.getSerial_placa_maeDto());
-                txtRecuperaData.setText(recebeComparacaoDto.getDt_hora_conectouDto());
-                txtHDSerial.setText(recebeComparacaoDto.getSerialHdDto());
-                txtSerialCPU.setText(recebeComparacaoDto.getSerialCPUDto());
-                txtAInformacoesLocais.setText(recebeComparacaoDto.getInformacoes_diversasDto());
 
                 desabilitarCamposInfo();
                 personalizarMaquinaBloqueada();
@@ -1377,10 +1265,6 @@ public class Login extends javax.swing.JFrame {
     private void btnLoginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnLoginKeyPressed
 
     }//GEN-LAST:event_btnLoginKeyPressed
-
-    private void txtRecuperaDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecuperaDataActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtRecuperaDataActionPerformed
 
 
     private void btnLoginFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnLoginFocusGained
@@ -2151,11 +2035,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanelStatus;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblChaveEntrada;
-    private javax.swing.JLabel lblDataHora;
     private javax.swing.JLabel lblIReport;
-    private javax.swing.JLabel lblId;
     private javax.swing.JLabel lblImgNuvemPos1;
     private javax.swing.JLabel lblImgNuvemPos2;
     private javax.swing.JLabel lblImgNuvemPos3;
@@ -2166,28 +2047,18 @@ public class Login extends javax.swing.JFrame {
     public static javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblLogoJava;
     private javax.swing.JLabel lblNetbeans;
-    private javax.swing.JLabel lblPlacaMae;
     private javax.swing.JLabel lblSQL;
     private javax.swing.JLabel lblSenha;
-    private javax.swing.JLabel lblSerialCPU;
-    private javax.swing.JLabel lblSerialHD;
     private javax.swing.JLabel lblStatusDaConexao;
     private javax.swing.JLabel lblStatusEspecificacao;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel lblVerificacao;
-    private javax.swing.JPanel painelColetadoInformaceos;
     private javax.swing.JPanel painelEfeitoTxtLogin;
     private javax.swing.JPanel painelEfeitoTxtSenha;
     private javax.swing.JPanel painelInformativo;
     private javax.swing.JPanel painelNuvem;
     private javax.swing.JProgressBar progressBarraPesquisa;
-    private javax.swing.JTextArea txtAInformacoesLocais;
-    private javax.swing.JTextField txtHDSerial;
-    private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtLogin;
-    private javax.swing.JTextField txtPlacaMae;
-    private javax.swing.JTextField txtRecuperaData;
     private javax.swing.JPasswordField txtSenha;
-    private javax.swing.JTextField txtSerialCPU;
     // End of variables declaration//GEN-END:variables
 }
