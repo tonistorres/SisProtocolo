@@ -38,7 +38,7 @@ public class ConexaoUtil {
         Class.forName("com.mysql.jdbc.Driver");
 
 
-        return DriverManager.getConnection("jdbc:mysql://162.241.61.90/inovec87_infoq", "inovec87_torres", "pmaa1@2@");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/infoq", "root", "1020");
 
     }
     
@@ -81,7 +81,7 @@ public class ConexaoUtil {
 
 
 
-            Connection conexao = DriverManager.getConnection("jdbc:mysql://162.241.61.90/inovec87_infoq", "inovec87_torres", "pmaa1@2@");
+            Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/infoq", "root", "1020");
 
             conexao.close();
 
@@ -107,7 +107,7 @@ public class ConexaoUtil {
 
         Class.forName("com.mysql.jdbc.Driver");
         System.out.println("conectado sisHospeda");
-        return DriverManager.getConnection("jdbc:mysql://162.241.61.90/inovec87_sisseg", "inovec87_alberto", "pmaa1@2@");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/infoq", "root", "1020");
 
     }
 
